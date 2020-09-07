@@ -1,11 +1,35 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
+      <BrowserRouter>     
       <header className="App-header">
+      출처: https://codingbroker.tistory.com/72
+
+        <Link to="/">Home</Link>
+        <Link to="/beauty">Beauty</Link>
+        <Link to="/game">Game</Link>
+        <Route path="/" exact component={Home}></Route>
+        <Route path="/beauty" component={Beauty}></Route>
+        <Route path="/game" component={Game}></Route>
+        </header>
+
+      </BrowserRouter>
+    </div>
+  );
+}
+
+export default App;
+
+
+
+function Home() {
+  return (
+      <div>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -18,9 +42,15 @@ function App() {
         >
           Learn React
         </a>
-      </header>
-    </div>
+      </div>
   );
 }
 
-export default App;
+function Beauty() {
+  return <div>Beauty component</div>;
+}
+
+function Game() {
+  return <div>Game component</div>;
+}
+
