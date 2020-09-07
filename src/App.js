@@ -8,8 +8,9 @@ function App() {
     <div className="App">
       <BrowserRouter>     
       <header className="App-header">
-      출처: https://codingbroker.tistory.com/72
+      출처: https://codingbroker.tistory.com/72     https://www.hohyeonmoon.com/blog/react-js-github-pages-deploy/      https://velog.io/@byjihye/react-github-pages
 
+      
         <Link to="/">Home</Link>
         <Link to="/beauty">Beauty</Link>
         <Link to="/game">Game</Link>
