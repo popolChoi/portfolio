@@ -1,16 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import LayoutContainar from'./layout/container/LayoutContainar';
+
+import logo from './resource/img/logo.svg';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>     
       <header className="App-header">
-      출처: https://codingbroker.tistory.com/72     https://www.hohyeonmoon.com/blog/react-js-github-pages-deploy/      https://velog.io/@byjihye/react-github-pages
+      출처: 
+      https://codingbroker.tistory.com/72     
+      https://www.hohyeonmoon.com/blog/react-js-github-pages-deploy/      
+      https://velog.io/@byjihye/react-github-pages
 
-      
+
         <Link to="/">Home</Link>
         <Link to="/beauty">Beauty</Link>
         <Link to="/game">Game</Link>
@@ -52,6 +56,6 @@ function Beauty() {
 }
 
 function Game() {
-  return <div>Game component</div>;
+  return   (<LayoutContainar />);
 }
 
