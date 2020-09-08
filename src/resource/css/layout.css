@@ -1,28 +1,30 @@
 #jb-container {
     width: 100%;
-   /* // margin: 10px auto; */
-    /* padding: 20px; */
-    /* border: 1px solid #bcbcbc; */
+   /* margin: 10px auto;
+    padding: 20px; 
+    border: 1px solid #bcbcbc; */
   }
   #jb-header {
     padding: 20px;
-    margin-bottom: 20px;
-    border: 1px solid #bcbcbc;
-  }
-  #jb-content {
-    width: 580px;
-    padding: 20px;
-    margin-bottom: 20px;
-    float: left;
-    border: 1px solid #bcbcbc;
+    /* margin-bottom: 20px; 
+    border: 1px solid #bcbcbc; */
   }
   #jb-sidebar {
     width: 260px;
+    padding: 20px;
+    float: left;
+  /* margin-bottom: 20px; 
+    border: 1px solid #bcbcbc; */
+  }
+
+  #jb-content {
+    width: 580px;
     padding: 20px;
     margin-bottom: 20px;
     float: right;
     border: 1px solid #bcbcbc;
   }
+  
   #jb-footer {
     clear: both;
     padding: 20px;

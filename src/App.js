@@ -7,8 +7,12 @@ import logo from './resource/img/logo.svg';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>     
-      <header className="App-header">
+      <LayoutContainar />
+      <BrowserRouter>
+    <header className="App-header">
+
+
+
       출처: 
       https://codingbroker.tistory.com/72     
       https://www.hohyeonmoon.com/blog/react-js-github-pages-deploy/      
@@ -20,7 +24,6 @@ function App() {
         <Link to="/game">Game</Link>
         <Route path="/" exact component={Home}></Route>
         <Route path="/beauty" component={Beauty}></Route>
-        <Route path="/game" component={Game}></Route>
         </header>
 
       </BrowserRouter>
@@ -54,8 +57,3 @@ function Home() {
 function Beauty() {
   return <div>Beauty component</div>;
 }
-
-function Game() {
-  return   (<LayoutContainar />);
-}
-
