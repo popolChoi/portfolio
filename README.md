@@ -66,3 +66,18 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+
+
+
+
+
+
+###  eslint 설치
+eslint --init
+
+### react-router-dom 설치
+
+### 출처 https://cjh5414.github.io/react-semantic-ui-start/
+npm install --save semantic-ui-react semantic-ui-css 
