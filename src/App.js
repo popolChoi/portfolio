@@ -1,37 +1,49 @@
-import React from 'react';
+import React, { Component } from "react";
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 import LayoutContainar from'./layout/container/LayoutContainar';
 
 import logo from './resource/img/logo.svg';
 
-function App() {
-  return (
-    <div className="App">
-      <LayoutContainar />
-      <BrowserRouter>
-    <header className="App-header">
+  //  {/* 출처: 
+  //       https://codingbroker.tistory.com/72     
+  //       https://www.hohyeonmoon.com/blog/react-js-github-pages-deploy/      
+  //       https://velog.io/@byjihye/react-github-pages */}
 
+class App extends Component {
 
+ 
 
-      출처: 
-      https://codingbroker.tistory.com/72     
-      https://www.hohyeonmoon.com/blog/react-js-github-pages-deploy/      
-      https://velog.io/@byjihye/react-github-pages
+  render() {
+    return (
+      <div className="App">
+        <BrowserRouter>
+          <div className="lay-container">
 
+            <LayoutContainar 
+              cayoutContent={ 
+                <header className="App-header">
+                  <Route path="/" exact component={Home}></Route>
+                  <Route path="/test1" component={()=><div>!!</div>}></Route>
+                </header>
+                // <div>
+                //   <Route path="/" exact component={Home}></Route>
+                //   <Route path="/test1" component={()=><div>!!</div>}></Route>
+                // </div>
+              }            
+            />
+            
+    
+          </div>
 
-        <Link to="/">Home</Link>
-        <Link to="/beauty">Beauty</Link>
-        <Link to="/game">Game</Link>
-        <Route path="/" exact component={Home}></Route>
-        <Route path="/beauty" component={Beauty}></Route>
-        </header>
+        </BrowserRouter>
+      </div>
+    );
+  }
 
-      </BrowserRouter>
-    </div>
-  );
 }
 
 export default App;
+
 
 
 
@@ -54,6 +66,3 @@ function Home() {
   );
 }
 
-function Beauty() {
-  return <div>Beauty component</div>;
-}

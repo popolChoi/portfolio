@@ -1,30 +1,62 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
+import { Link } from "react-router-dom";
 
 class LayoutContainar extends Component {
+  state = {
+    layBar: { gridColumn: "0", width: "0%" },
+    layHeader: { gridColumn: "1 / 16" },
+    layContent: { gridColumn: "1 / 16" },
+  };
+
+  onClick = () => {
+    const { layBar } = this.state;
+    if (layBar.width) {
+      this.setState({
+        layBar: {},
+        layHeader: {},
+        layContent: {},
+      });
+    } else {
+      this.setState({
+        layBar: { gridColumn: "0", width: "0%" },
+        layHeader: { gridColumn: "1 / 16" },
+        layContent: { gridColumn: "1 / 16" },
+      });
+    }
+  };
+
   render() {
+    const { cayoutContent } = this.props;
+    const { layBar, layHeader, layContent } = this.state;
     return (
-      <div id="jb-container">
-        <div id="jb-header">
-          <h1>Responsive Layout</h1>
+      <Fragment>
+        <div className="lay-bar" style={layBar}>
+          {!layBar.width ? (
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/test1">test1</Link>
+              </li>
+            </ul>
+          ) : (
+            []
+          )}
         </div>
-        <div id="jb-sidebar">
-          <h2>Sidebar</h2>
-          <ul>
-            <li>Lorem</li>
-            <li>Ipsum</li>
-            <li>Dolor</li>
-          </ul>
+
+        <div className="lay-header" style={layHeader}>
+          <div className="lay-bar-but" onClick={this.onClick}>
+            but
+          </div>
+          <div> header </div>
         </div>
-        {/* 
-        
-    <div id="jb-content">
-      <h2>Content</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec mollis nulla. Phasellus lacinia tempus mauris eu laoreet. Proin gravida velit dictum dui consequat malesuada. Aenean et nibh eu purus scelerisque aliquet nec non justo. Aliquam vitae aliquet ipsum. Etiam condimentum varius purus ut ultricies. Mauris id odio pretium, sollicitudin sapien eget, adipiscing risus.</p>
-    </div>
-    <div id="jb-footer">
-      <p>Copyright</p>
-    </div> */}
-      </div>
+
+        <div className="lay-content" style={layContent}>
+          {cayoutContent}
+          {/* <div className="lay-content-test">text</div> */}
+        </div>
+      </Fragment>
     );
   }
 }
