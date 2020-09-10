@@ -30,6 +30,8 @@ class LayoutContainar extends Component {
         <div className="lay-main">
           <div className="lay-bar" style={layBar}>
             <ul>
+              <li></li>
+              <li></li>
               <li>
                 <Link to="/">Home</Link>
               </li>
@@ -38,7 +40,6 @@ class LayoutContainar extends Component {
               </li>
             </ul>
           </div>
-
           <div className="lay-container" style={layContainer}>
             <div className="lay-header">
               <div className="lay-bar-but" onClick={this.onClick}>
