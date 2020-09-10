@@ -67,22 +67,22 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
+### eslint 설치
 
-
-
-
-
-
-
-###  eslint 설치
 eslint --init
 
 ### react-router-dom 설치
 
 ### 출처 https://cjh5414.github.io/react-semantic-ui-start/
-npm install --save semantic-ui-react semantic-ui-css 
+
+npm install --save semantic-ui-react semantic-ui-css
 
 ### https://semantic-ui.com/elements/icon
-npm install semantic-ui
+
+### npm install semantic-ui
 
 https://www.nextree.io/010-7-3/
+
+### npm install react-icons --save
+
+https://react-icons.github.io/react-icons/#/
