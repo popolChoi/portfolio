@@ -16,44 +16,40 @@
     url("../../resource/img/다운로드.jpg");
   background-blend-mode: multiply;
   filter: grayscale(100%);
-  height: 100vh;
-
   float: left;
-  width: 100px;
+  height: 100vh;
+  width: 300px;
   transition: width 0.25s linear;
 }
 
 .lay-container {
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(15, 1fr);
-  grid-template-rows: repeat(15, 1fr);
-  height: 100vh;
-
+  grid-template-rows: repeat(15, 1fr); */
   float: right;
-  width: calc(100% - 100px);
+  height: 100vh;
+  width: calc(100% - 300px);
   transition: width 0.25s linear;
 }
 
 .lay-header {
-  background-color: #a09e9e;
-  grid-column: 1 / 16;
-  grid-row: 1;
+  /* background-color: #a09e9e; */
+  /* grid-column: 1 / 16;
+  grid-row: 1; */
 }
 
 .lay-bar-but {
-  background-color: #ebdbdb;
-
-  /* grid-column: 3;
-  grid-row: 1 ; */
-  float: left;
+  transition: all ease 0.25s;
+  /* transform: rotate(180deg); */
+  /* float: left; */
   /* width: 20px;
-  height: 10px; */
+  height: 20px; */
 }
 
 .lay-content {
   background-color: #f1ecec;
-  grid-column: 1 / 16;
-  grid-row: 2/ 16;
+  /* grid-column: 1 / 16;
+  grid-row: 2/ 16; */
   height: 100%;
   width: 100%;
 }

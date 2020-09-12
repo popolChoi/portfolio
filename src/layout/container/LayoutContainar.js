@@ -1,21 +1,26 @@
 import React, { Component, Fragment } from "react";
 import { Link } from "react-router-dom";
+import { RiArrowLeftSLine } from "react-icons/ri";
+import { Input } from "semantic-ui-react";
 
 class LayoutContainar extends Component {
   state = {
-    layBar: { width: "100px" },
-    layContainer: { width: "calc(100% - 100px)" },
+    layBarBut: {},
+    layBar: { width: "300px" },
+    layContainer: { width: "calc(100% - 300px)" },
   };
 
   onClick = () => {
     const { layBar } = this.state;
     if (layBar.width === "0%") {
       this.setState({
-        layBar: { width: "100px" },
-        layContainer: { width: "calc(100% - 100px)" },
+        layBarBut: {},
+        layBar: { width: "300px" },
+        layContainer: { width: "calc(100% - 300px)" },
       });
     } else {
       this.setState({
+        layBarBut: { transform: "rotate(180deg)" },
         layBar: { width: "0%" },
         layContainer: { width: "100%" },
       });
@@ -24,11 +29,17 @@ class LayoutContainar extends Component {
 
   render() {
     const { cayoutContent } = this.props;
-    const { layContainer, layBar } = this.state;
+    const { layContainer, layBar, layBarBut } = this.state;
     return (
       <Fragment>
         <div className="lay-main">
           <div className="lay-bar" style={layBar}>
+            <Input
+              icon="search"
+              placeholder="Search..."
+              // value={this.state.value}
+              onChange={(e, v) => console.log(e, v.value)}
+            />
             <ul>
               <li></li>
               <li></li>
@@ -42,12 +53,14 @@ class LayoutContainar extends Component {
           </div>
           <div className="lay-container" style={layContainer}>
             <div className="lay-header">
-              <div className="lay-bar-but" onClick={this.onClick}>
-                but
-              </div>
-              <div> header </div>
+              <button
+                class="ui icon right button huge lay-bar-but"
+                onClick={this.onClick}
+                style={{ background: "white" }}
+              >
+                <RiArrowLeftSLine style={layBarBut} />
+              </button>
             </div>
-
             <div className="lay-content">
               {cayoutContent}
               {/* <div className="lay-content-test">text</div> */}

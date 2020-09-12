@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
-import LayoutContainar from "./layout/container/LayoutContainar";
+import { BrowserRouter } from "react-router-dom";
+import { Layout } from "./layout";
 
-import logo from "./resource/img/logo.svg";
+import Routes from "./Routes";
 
 //  {/* 출처:
 //       https://codingbroker.tistory.com/72
@@ -14,16 +14,11 @@ class App extends Component {
     return (
       <div className="App">
         <BrowserRouter>
-          <LayoutContainar
+          <Layout
             cayoutContent={
               <header className="App-header">
-                <Route path="/" exact component={Home}></Route>
-                <Route path="/test1" component={() => <div>!!</div>}></Route>
+                <Routes />
               </header>
-              // <div>
-              //   <Route path="/" exact component={Home}></Route>
-              //   <Route path="/test1" component={()=><div>!!</div>}></Route>
-              // </div>
             }
           />
         </BrowserRouter>
@@ -33,22 +28,3 @@ class App extends Component {
 }
 
 export default App;
-
-function Home() {
-  return (
-    <div>
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>
-        Edit <code>src/App.js</code> and save to reload.
-      </p>
-      <a
-        className="App-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Learn React
-      </a>
-    </div>
-  );
-}

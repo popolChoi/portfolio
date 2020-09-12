@@ -86,3 +86,11 @@ https://www.nextree.io/010-7-3/
 ### npm install react-icons --save
 
 https://react-icons.github.io/react-icons/#/
+
+### npm install react-bootstrap bootstrap
+
+https://react-bootstrap.netlify.app/
+
+### 리덕스 정리
+
+https://velog.io/@hwang-eunji/%EB%A6%AC%EB%8D%95%EC%8A%A4-%EC%A0%95%EB%A6%AC-redux-1
